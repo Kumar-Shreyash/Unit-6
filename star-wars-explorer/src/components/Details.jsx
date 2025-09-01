@@ -29,7 +29,7 @@ export const Details=()=>{
         <div>
         {load.loading && <p className="flex justify-center items-center h-[90vh] w-[90vw] text-3xl">Loading...</p>}
         {load.error && <p className="flex justify-center items-center h-[90vh] w-[90vw] text-3xl">{errlo.error}</p>}
-        <div className="w-[50vw] m-auto mt-10">
+        <div className="w-[30vw] m-auto mt-10 h-[80vh] p-5 grid rounded-4xl shadow-2xs hover:shadow-2xl shadow-amber-700">
             <p className="text-4xl text-center">Name : {char.name}</p>
             <p className="text-2xl text-center">Gender : {char.gender}</p>
             <p className="text-2xl text-center">Height : {char.height}</p>
