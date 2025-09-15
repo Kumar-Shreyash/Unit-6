@@ -11,8 +11,15 @@ export default function Body() {
             {data.length>0?(data.map((ele,i)=>(
                 <div key={i}>
                     <h3 className='ml-4'>{ele.word}{ele.phonetic?ele.phonetic:""}</h3>
+                    <div className='flex gap-2'>
+                    {ele.meanings.map((ele,i)=>(
+                        <div key={i}>
+                        <p>{ele.partOfSpeech}</p>
+                        </div>
+                    ))}
+                    </div>
                 </div>
-            ))):(<p className='ml-4'>a</p>)}
+            ))):(<p className='ml-4'></p>)}
         </div>
         <div className='flex-1/3'>
             <h2 className='font-bold p-2 text-xl'>Suggestions</h2>

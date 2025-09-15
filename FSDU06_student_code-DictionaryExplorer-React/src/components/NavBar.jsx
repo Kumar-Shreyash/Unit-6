@@ -27,6 +27,7 @@ export default function NavBar() {
       const res= await resp.json()
       setHistory([...history,search])
       setData(res)
+      setSearch("")
       console.log(res)
     } catch (error) {
       console.log(error.message)
