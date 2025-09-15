@@ -8,18 +8,6 @@ export default function NavBar() {
   const themeRef=useRef()
   const {search,setSearch,history,setHistory,setSuggestion,setData}=useContext(SearchContext)
 
-  async function fetchData(){
-    try {
-      const resp=await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${search}`)
-      const res= await resp.json()
-      setHistory([...history,search])
-      setData(res)
-      console.log(res)
-    } catch (error) {
-      console.log(error.message)
-    }
-  } 
-  
   async function fetchWord(e){
     const temp=e.target.value
     setSearch(temp)
@@ -32,6 +20,20 @@ export default function NavBar() {
       console.log(error.message)
     }
   }
+
+  async function fetchData(){
+    try {
+      const resp=await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${search}`)
+      const res= await resp.json()
+      setHistory([...history,search])
+      setData(res)
+      console.log(res)
+    } catch (error) {
+      console.log(error.message)
+    }
+  } 
+  
+
 
   function handleSearch(e){
     e.preventDefault()
