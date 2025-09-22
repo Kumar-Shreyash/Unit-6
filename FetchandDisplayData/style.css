@@ -1,0 +1,12 @@
+input {
+    width: 20vw;
+    height: 3vh;
+}
+button{
+    padding: 5px;
+}
+#input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
